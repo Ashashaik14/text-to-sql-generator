@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to SQL Generator</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 50px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background: #eee;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Text → SQL Generator</h2>
+
+    <form method="POST">
+        <input type="text" name="query" placeholder="Enter natural language query">
+        <button type="submit">Generate SQL</button>
+    </form>
+
+    {% if output %}
+    <div class="output">
+        {{ output }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
